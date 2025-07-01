@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { emails, hideEmail } from '../composables/useEmails';
+  import { emails, type Email } from '../composables/useEmails';
   import { ref, computed  } from 'vue';
 
   const selectedTab = ref<"inbox" | "trash">("inbox");
