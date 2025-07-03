@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "@/pages/HomePage.vue";
 import LoginPage from "@/pages/LoginPage.vue";
+import EmailDetail from "@/pages/EmailDetail.vue";
 
 const routes = [
   { path: "/", name: "Login", component: LoginPage },
@@ -8,6 +9,12 @@ const routes = [
     path: "/home",
     name: "Home",
     component: HomePage,
+    meta: { requiresAuth: true },
+  },
+  {
+    path: "/email/:id",
+    name: "EmailDetail",
+    component: EmailDetail,
     meta: { requiresAuth: true },
   },
 ];
